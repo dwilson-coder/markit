@@ -1,32 +1,33 @@
-# React + TypeScript + Vite
+# Text Search & Highlight
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A Chromium browser extension that lets you search any webpage for a word or phrase, scroll through matches, customize the highlight color, and copy all results to your clipboard.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🔍 **Search** — find all instances of a word or phrase on the current page
+- 📜 **Navigate** — jump between matches with Prev / Next
+- 🎨 **Highlight** — choose any background color for matches
+- 📋 **Copy** — copy all matched text to your clipboard at once
+- 🧹 **Clear** — remove all highlights with one click
+- 🌐 **Cross-browser** — works on Chrome, Edge, Brave, Opera, and any Chromium-based browser
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Technology |
+|---|---|
+| UI | React 19 + TypeScript |
+| Build | Vite 7 + [@crxjs/vite-plugin](https://crxjs.dev) |
+| Manifest | Chrome Extension Manifest V3 |
+| Linting | Oxlint |
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### Prerequisites
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+- Node.js 18+
+- A Chromium-based browser
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Install
+
+```bash
+npm install   

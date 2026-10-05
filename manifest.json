@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Text Search & Highlight",
+  "version": "1.0.0",
+  "description": "Search, highlight, and copy text on any web page",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.ts"],
+      "run_at": "document_idle"
+    }
+  ]
+}   
